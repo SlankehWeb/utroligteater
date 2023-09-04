@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const EventReadMore = () => {
-  const [events, setEvents] = useState([]);
+  const [data, setData] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const EventReadMore = () => {
       try {
         const result = await axios.get(url);
         console.log(result);
-        setEvents(result.data);
+        setData(result.data);
       } catch (err) {
         console.error(err);
       }
@@ -21,18 +21,18 @@ const EventReadMore = () => {
 
  
     getData();
-  }, [id, setEvents]); 
+  }, [id]); 
 
   return (
  
     <div className="eventsCards">
-      {events.map((data) => (
+      {data &&(  
         <figure className="eventsCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <p>{data.startdate}-{data.stopdate}</p>
           <h2>{data.title}</h2>
         </figure>
-      ))}
+      )}
     </div>
   );
 };
