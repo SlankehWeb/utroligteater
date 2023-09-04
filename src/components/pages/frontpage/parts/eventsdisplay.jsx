@@ -5,7 +5,7 @@ const EventDisplay = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:4000/events`;
+    const url = `http://localhost:4000/events?attributes=id,title,image`;
 
     const getData = async () => {
       try {
@@ -26,7 +26,7 @@ const EventDisplay = () => {
     <div className="eventsCards">
       {events.map((data) => (
         <figure className="eventsCard" key={data.id}>
-          <img src={`http://localhost:4000/events/${data.image}`} alt="img" />
+          <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <h2>{data.title}</h2>
         </figure>
       ))}
