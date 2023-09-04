@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-
-const EventDisplay = () => {
+const EventReadMore = () => {
   const [events, setEvents] = useState([]);
-
+  const { id } = useParams();
 
   useEffect(() => {
-    const url = `http://localhost:4000/events?attributes=id,title,image,description,startdate,stopdate,duration_minutes,price`;
+    const url = `http://localhost:4000/events/${id}`;
 
     const getData = async () => {
       try {
@@ -21,7 +21,7 @@ const EventDisplay = () => {
 
  
     getData();
-  }, [setEvents]); 
+  }, [id, setEvents]); 
 
   return (
  
@@ -37,4 +37,4 @@ const EventDisplay = () => {
   );
 };
 
-export default EventDisplay;
+export default EventReadMore;
