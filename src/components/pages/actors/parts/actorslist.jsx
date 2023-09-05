@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ActorsList = () => {
   const [events, setEvents] = useState([]);
@@ -22,13 +23,15 @@ const ActorsList = () => {
   }, [setEvents]); 
 
   return (
-    <div className="eventsCards">
+    <div className="actorsCards">
       {events.map((data) => (
-        <figure className="eventsCard" key={data.id}>
+        <figure className="Card" key={data.id}>
               <img src={`http://localhost:4000/Assets/Images/actors/${data.image}`} alt="img" />
           <h2>{data.name}</h2>
           <p>{data.description}</p>
-          
+          <Link to={`/skuespillere/${data.id}`}>
+            <button>læs mere</button>
+          </Link>
         </figure>
       ))}
     </div>

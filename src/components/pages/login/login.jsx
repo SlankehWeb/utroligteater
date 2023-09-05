@@ -59,7 +59,7 @@ const Login = () => {
           </form>
         ) : (
           <div>
-            <p>Du er logget ind som {`${loginData.firstname} ${loginData.lastname} `}</p>
+            <p>Du er logget på som {`${loginData.firstname} ${loginData.lastname} `}</p>
             <button onClick={logOut}>Log ud</button>
           </div>
         )}

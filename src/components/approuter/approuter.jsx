@@ -4,16 +4,17 @@ import Showsandevents from "../pages/playsandevents/playsandevents";
 import Login from "../pages/login/login";
 import Actors from "../pages/actors/actors";
 import EventReadMore from "../pages/eventreadmore/eventreadmmore";
+import ActorsDetails from "../pages/actorsdetails/actorsdetails";
 
 const AppRouter = () => {
     return (
         <Routes>
-        <Route path="/">
-            <Route index element={<Frontpage/>}/>
-            <Route path=":id" element={<EventReadMore/>}/>
-        </Route>
+        <Route path="/" element={<Frontpage/>}/>
+        <Route path=":id" element={<EventReadMore/>}/>
         <Route path="/forestillinger&events" element={<Showsandevents/>}/>
+        <Route path="/forestillinger&events/:id" element={<EventReadMore/>}/>
         <Route path="/skuespillere" element={<Actors/>}/>
+        <Route path="/skuespillere/:id" element={<ActorsDetails/>}/>
         <Route path="/login" element={<Login/>}/>
         </Routes>
         );

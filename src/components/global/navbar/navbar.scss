@@ -19,7 +19,7 @@ header {
     position: absolute;
     text-align: left;
     top: 100%;
-    background: black;
+    background: rgb(255, 255, 255);
     width: 100vw;
     transform: scale(1, 0);
     transform-origin: top;
@@ -69,13 +69,13 @@ header {
     cursor: pointer;
     span {
       display: block;
-      background: white;
+      background: rgb(0, 0, 0);
       height: 1px;
       width: 35px;
       position: relative;
       &::before {
         display: block;
-        background: white;
+        background: rgb(9, 9, 9);
         height: 1px;
         width: 35px;
         position: relative;
@@ -85,7 +85,7 @@ header {
       }
       &::after {
         display: block;
-        background: white;
+        background: rgb(0, 0, 0);
         height: 1px;
         width: 35px;
         position: relative;
@@ -139,7 +139,6 @@ header {
       li {
         position: relative;
         top: 2.5vw;
-        border-right: 2px solid white;
         padding-right: 30px;
         &:last-child {
           border-right: none;

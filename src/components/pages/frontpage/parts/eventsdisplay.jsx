@@ -32,7 +32,7 @@ const EventDisplay = () => {
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <p>{data.startdate}-{data.stopdate}</p>
           <h2>{data.title}</h2>
-          <Link >
+          <Link to={`${data.id}`}>
           <button>læs mere</button>
           </Link>
         </figure>
