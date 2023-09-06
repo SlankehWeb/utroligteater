@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./actorsdetails.scss";
+import { Link } from "react-router-dom";
 
 const ActorsDetails = () => {
   const [data, setData] = useState([]);
@@ -25,15 +27,23 @@ const ActorsDetails = () => {
 
   return (
  
-    <div className="eventsCards">
+    <div>
+    <div className="actorsdetailsborder">
+    <h1>Skuespillere</h1>
       {data &&(  
-        <figure className="eventsCard" key={data.id}>
+        <figure className="actorsdetailsCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/actors/${data.image}`} alt="img" />
-          <p>{data.startdate}-{data.stopdate}</p>
-          <h2>{data.title}</h2>
+          <h2>{data.name}</h2>
+          <p>{data.description}</p>
         </figure>
       )}
-    </div>
+      </div>
+      <div className="actorsdetailbutton">
+      <Link to={`/skuespillere`}>
+            <button>ALLE SKUESPILLERE</button>
+          </Link>
+          </div>
+      </div>
   );
 };
 

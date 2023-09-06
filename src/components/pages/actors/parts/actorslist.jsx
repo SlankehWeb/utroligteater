@@ -25,7 +25,6 @@ const ActorsList = () => {
 
   return (
     <div className="actorsCards">
-      
       {events.map((data) => (
         <figure className="actorsCard" key={data.id}>
               <img src={`http://localhost:4000/Assets/Images/actors/${data.image}`} alt="img" />

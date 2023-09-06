@@ -1,9 +1,12 @@
-.actorsCard{
+.actorsdetailsborder{
+    border: solid 3px #D39D5B;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: hidden;
+    .actorsdetailsCard{
 
-    
-    border-bottom: solid 2px #DFDFDF;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    }
+
     img{
 
         width: 70%;
@@ -16,46 +19,37 @@
         color: #707070;
     }
     p{
-
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: #D39D5B;
     }
-    .buttonplacement{
-
-    }
-    button{
-        background-color: #30454C; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1em;
-        font-weight: bold;
-    }
 }
 
-h1{
-    color: #D39D5B;
-    position: relative;
-    left: 2%;
-    font-family: Playfair Display;
+.actorsdetailbutton{
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+        button{
+           background-color: #AD7A51; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold; 
+    }
+
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1300px) { 
 
-
-    .actorsCard{
+    .actorsdetailsCard{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        
-        border-bottom: solid 2px #DFDFDF;
-        padding-top: 2%;
-        padding-bottom: 2%;
         img{
             grid-area: 1 / 1 / 5 / 2;
             width: 100%;
@@ -75,15 +69,10 @@ h1{
             grid-area: 2 / 2 / 5 / 5; 
             position: relative;
             left: 2vw;
-            bottom: 4vh;
-            font-size: 1.2em;
+            bottom: 11vh;
+            font-size: 1.5em;
             color: #D39D5B;
         }
-        .buttonplacement{
-            grid-area: 4 / 5 / 5 / 6; 
-            position: relative;
-            left: 6vw;
-            bottom: 3vh;
-        }
-    }
- }
+}
+
+}
