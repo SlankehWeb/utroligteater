@@ -8,7 +8,7 @@ const EventDisplay = () => {
 
 
   useEffect(() => {
-    const url = `http://localhost:4000/events?attributes=id,title,image,description,startdate,stopdate,duration_minutes,price`;
+    const url = `http://localhost:4000/events?limit=3&attributes=id,title,image,description,startdate,stopdate,duration_minutes,price`;
 
     const getData = async () => {
       try {
