@@ -26,9 +26,9 @@ const EventDisplay = () => {
 
   return (
  
-    <div className="eventsCards">
+    <div className="eventCards">
       {events.map((data) => (
-        <figure className="eventsCard" key={data.id}>
+        <figure className="eventCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <p>{data.stage.name}</p>
           <p>{data.startdate}-{data.stopdate}</p>
