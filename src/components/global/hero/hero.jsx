@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import "./hero.scss";
 
 const Hero = () => {
   const [events, setEvents] = useState([]);
@@ -24,16 +24,15 @@ const Hero = () => {
 
   return (
  
-    <div className="eventsCards">
+    <div >
       {events.map((data) => (
-        <figure className="eventsCard" key={data.id}>
-          <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
+        <figure className="heroCard" key={data.id}>
+          <img src={require('./Fyrtøjet.png')} alt="img" />
           <h2>{data.title}</h2>
+          <div className="stagename">
           <p>{data.stage.name}</p>
-          <p>{data.startdate}-{data.stopdate}</p>
-          <Link to={`/forestillinger&events/${data.id}`}>
-            <button>læs mere</button>
-          </Link>
+          <p className="dates">{data.startdate}-{data.stopdate}</p>
+          </div>
         </figure>
       ))}
     </div>
