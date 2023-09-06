@@ -8,7 +8,6 @@ const EventReadMore = () => {
 
   useEffect(() => {
     const url = `http://localhost:4000/events/${id}`;
-
     const getData = async () => {
       try {
         const result = await axios.get(url);
@@ -19,15 +18,14 @@ const EventReadMore = () => {
       }
     };
 
- 
     getData();
   }, [id]); 
 
   return (
  
-    <div className="eventsCards">
+    <div className="readCards">
       {data &&(  
-        <figure className="eventsCard" key={data.id}>
+        <figure className="readCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <p>{data.startdate}-{data.stopdate}</p>
           <h2>{data.title}</h2>
