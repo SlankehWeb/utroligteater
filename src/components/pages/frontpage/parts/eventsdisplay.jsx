@@ -30,6 +30,7 @@ const EventDisplay = () => {
       {events.map((data) => (
         <figure className="eventsCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
+          <p>{data.stage.name}</p>
           <p>{data.startdate}-{data.stopdate}</p>
           <h2>{data.title}</h2>
           <Link to={`${data.id}`}>

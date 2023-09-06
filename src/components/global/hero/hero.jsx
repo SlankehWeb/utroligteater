@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Events = () => {
+const Hero = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:4000/events?attributes=id,title,image,description,startdate,stopdate,duration_minutes,price`;
+    const url = `http://localhost:4000/events?attributes=id%2Ctitle%2Cimage%2Cstartdate%2Cstopdate&limit=1`;
 
     const getData = async () => {
       try {
@@ -40,4 +40,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default Hero;
