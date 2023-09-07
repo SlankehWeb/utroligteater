@@ -5,6 +5,11 @@ import { useParams } from "react-router-dom";
 const EventReadMore = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
+  const formatDate = (dateNew) => {
+    const date = new Date(dateNew);
+    const options = { day: "2-digit", month: "short", year: "numeric" };
+    return date.toLocaleDateString("da-DK", options);
+  };
 
   useEffect(() => {
     const url = `http://localhost:4000/events/${id}`;
@@ -27,7 +32,7 @@ const EventReadMore = () => {
       {data &&(  
         <figure className="readCard" key={data.id}>
           <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
-          <p>{data.startdate}-{data.stopdate}</p>
+          <p>{formatDate(data.startdate)} -{formatDate(data.stopdate)}</p>
           <h2>{data.title}</h2>
         </figure>
       )}

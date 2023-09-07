@@ -5,7 +5,11 @@ import "./eventslist.scss";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-
+    const formatDate = (dateNew) => {
+    const date = new Date(dateNew);
+    const options = { day: "2-digit", month: "short", year: "numeric" };
+    return date.toLocaleDateString("da-DK", options);
+  };
   useEffect(() => {
     const url = `http://localhost:4000/events?attributes=id,title,image,description,startdate,stopdate,duration_minutes,price`;
 
@@ -34,7 +38,7 @@ const Events = () => {
           </div>
           <div className="stageanddate">
           <p >{data.stage.name}</p>
-          <p className="date">{data.startdate}-{data.stopdate}</p>
+          <p className="date">{formatDate(data.startdate)} -{formatDate(data.stopdate)}</p>
           </div>
           <div className="button1">
           <Link to={`/forestillinger&events/${data.id}`}>
