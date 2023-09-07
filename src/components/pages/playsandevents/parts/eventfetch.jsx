@@ -32,7 +32,7 @@ const Events = () => {
     <div className="eventsCards">
       {events.map((data) => (
         <figure className="eventsCard" key={data.id}>
-          <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
+          <img  rel="preload" fetchpriority="high" as="image" src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" />
           <div className="h2parent">
           <h2>{data.title}</h2>
           </div>

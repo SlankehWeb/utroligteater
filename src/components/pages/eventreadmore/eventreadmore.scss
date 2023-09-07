@@ -1,0 +1,125 @@
+.readCard {
+  border: solid 1px #ad7a51;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 1%;
+  .img1 {
+    background-color: #ad7a51;
+    padding: 2%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .dateprice {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .readmoredate {
+      grid-area: 1 / 1 / 2 / 2;
+      p {
+        color: #707070;
+        margin-left: 4%;
+        font-family: Titillium Web;
+      }
+      .s1 {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      .s2 {
+        font-size: 1.5em;
+      }
+    }
+    .readmoreprice {
+      font-family: Titillium Web;
+      text-align: end;
+      color: #707070;
+      font-size: 2em;
+      grid-area: 1 / 2 / 2 / 3;
+      margin-right: 4%;
+    }
+  }
+  .titlebutton {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .titlename {
+      grid-area: 1 / 1 / 2 / 2;
+      h2 {
+        font-family: Playfair Display;
+        color: #d39d5b;
+        margin-left: 4%;
+        font-size: 2em;
+      }
+      p {
+        font-family: Titillium Web;
+        margin-left: 4%;
+        color: #707070;
+      }
+    }
+    .buttonreadmore {
+      text-align: end;
+      margin-right: 4%;
+      margin-top: 5%;
+      grid-area: 1 / 2 / 2 / 3;
+      button {
+        background-color: #d39d5b; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 27.6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+  .desclength {
+    margin-left: 2%;
+    margin-right: 2%;
+    color: #d39d5b;
+    font-style: Titillium Web;
+  }
+}
+.h2m {
+  margin-left: 2%;
+  color: #707070;
+  font-family: Titillium Web;
+  font-weight: 100;
+}
+.card-container {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  .actiondiv {
+  
+    border: solid 1px #d39d5b;
+    .actorfig {
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      p{
+        font-family: Titillium Web;
+        color: #D39D5B;
+        text-align: center;
+        font-size: 1em;
+      }
+    }
+  }
+}
+hr{
+  background-color: #DFDFDF;
+  margin-left: 2%;
+  margin-right: 2%;
+}

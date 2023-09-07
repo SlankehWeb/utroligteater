@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./eventreadmore.scss";
 
-
 const EventReadMore = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
@@ -27,42 +26,63 @@ const EventReadMore = () => {
     };
 
     getData();
-  }, [id]); 
+  }, [id]);
 
   return (
- 
-    <div className="readCards">
-      {data &&(  
+    <>
+      {data && (
         <figure className="readCard" key={data.id}>
-          <img src={`http://localhost:4000/Assets/Images/events/small/${data.image}`} alt="img" className="img1"/>
-          <p className="readmoredate">{formatDate(data.startdate)} -{formatDate(data.stopdate)}</p>
-          <p className="readmoreprice">BILLETPRIS:{data.price} DKK</p>
-          <div className="titlename">
-          <h2>{data.title}</h2>
-          <p>{data.genre.name}</p>
+          <div className="img1">
+            <img
+              src={`http://localhost:4000/Assets/Images/events/medium/${data.image}`}
+              alt="img"
+            />
           </div>
-          <div className="buttonreadmore">
-          <Link to={`/forestillinger&events/${data.id}`}>
-            <button>LÆS MERE</button>
-          </Link>
+          <div className="dateprice">
+            <div className="readmoredate">
+              <p className="s1">{data.stage.name}</p>
+              <p className="s2">
+                {formatDate(data.startdate)} -{formatDate(data.stopdate)}
+              </p>
+            </div>
+            <p className="readmoreprice">BILLETPRIS:{data.price} DKK</p>
+          </div>
+          <hr/>
+          <div className="titlebutton">
+            <div className="titlename">
+              <h2>{data.title}</h2>
+              <p>{data.genre.name}</p>
+            </div>
+            <div className="buttonreadmore">
+              <Link to={`/forestillinger&events/${data.id}`}>
+                <button>KØB BILLET</button>
+              </Link>
+            </div>
           </div>
           <div className="desclength">
-          <p>{data.description}</p>
-          <p>Varighed ca. {data.duration_minutes}min</p>
+            <p>{data.description}</p>
+            <p>Varighed ca. {data.duration_minutes}min</p>
           </div>
-          <h2>MEDVIRKENDE</h2>
+          <h2 className="h2m">MEDVIRKENDE</h2>
+          <div className="card-container">
+            {data.actors &&
+              data.actors.map((actor) => {
+                return (
+                  <div key={actor.id} className="actiondiv">
+                    <figure className="actorfig">
+                      <img
+                        src={`http://localhost:4000/Assets/Images/actors/${actor.image}`}
+                        alt="actor"
+                      />
+                      <p>{actor.name}</p>
+                    </figure>
+                  </div>
+                );
+              })}
+          </div>
         </figure>
       )}
-               {data.actors && data.actors.map(actor =>{
-          return(
-            <figure key={actor.id} className="actorfig">
-              <img src={`http://localhost:4000/Assets/Images/actors/${actor.image}`} alt="actor"/>
-              <p>{actor.name} </p>
-            </figure>
-          
-          )
-         })}
-    </div>
+    </>
   );
 };
 

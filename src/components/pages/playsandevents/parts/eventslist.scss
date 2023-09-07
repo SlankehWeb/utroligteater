@@ -23,30 +23,34 @@ h2{
 }
 
 .button1{
+
     button{
         background-color: #30454C; /* Green */
         border: none;
         color: white;
-        padding: 15px 32px;
+        padding: 0.5vh 4vw;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1em;
         font-weight: bold;
 
+        max-width: 120px;
     } 
 }
 .button2{
+
     button{
         background-color: #D39D5B; /* Green */
         border: none;
         color: white;
-        padding: 15px 27.6px;
+        padding:0.5vh 3vw;;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1em;
         font-weight: bold;
+        max-width: 120px;
     }
 }
     }
@@ -93,7 +97,7 @@ h2{
             background-color: #30454C; /* Green */
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 0.5vh 3vw;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -109,7 +113,7 @@ h2{
             background-color: #D39D5B; /* Green */
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding:0.5vh 3vw;;
             text-align: center;
             text-decoration: none;
             display: inline-block;

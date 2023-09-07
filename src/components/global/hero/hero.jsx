@@ -31,8 +31,11 @@ const Hero = () => {
     <div >
       {events.map((data) => (
         <figure className="heroCard" key={data.id}>
-          <img src={require('./Fyrtøjet.png')} alt="img" />
+          <img rel="preload" fetchpriority="high" as="image" src={require('./Fyrtøjet.avif')} alt="img" />
+          <div className="h2r">
           <h2>{data.title}</h2>
+          <p>{data.genre.name}</p>
+          </div>
           <div className="stagename">
           <p>{data.stage.name}</p>
           <p className="dates">{formatDate(data.startdate)} -{formatDate(data.stopdate)}</p>
