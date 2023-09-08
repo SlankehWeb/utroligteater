@@ -1,86 +1,79 @@
-.actorsCard{
-
-    
-    border-bottom: solid 2px #DFDFDF;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    img{
-
-        width: 70%;
-        height: auto;
-    }
-    h2{
-
-        font-weight: normal;
-        font-family: Titillium Web;
-        color: #707070;
-    }
-    p{
-
-        font-size: 1.2em;
-        color: #D39D5B;
-    }
-    button{
-        background-color: #30454C; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1em;
-        font-weight: bold;
-    }
+.actorsCard {
+  border-bottom: solid 2px #dfdfdf;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  img {
+    width: 70%;
+    height: auto;
+  }
+  h2 {
+    font-weight: normal;
+    font-family: Titillium Web;
+    color: #707070;
+  }
+  p {
+    font-size: 1.2em;
+    color: #d39d5b;
+  }
+  button {
+    background-color: #30454c; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
 
-h1{
-    color: #D39D5B;
-    position: relative;
-    left: 2%;
-    font-family: Playfair Display;
+h1 {
+  color: #d39d5b;
+  position: relative;
+  left: 2%;
+  font-family: Playfair Display;
 }
 
 @media screen and (min-width: 1300px) {
+  .actorsCard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
-
-    .actorsCard{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        
-        border-bottom: solid 2px #DFDFDF;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        img{
-            grid-area: 1 / 1 / 5 / 2;
-            width: 100%;
-            height: auto;
-        }
-        h2{
-            grid-area: 1 / 2 / 2 / 4;
-            position: relative;
-            left: 2vw;
-            bottom: 3vh;
-            font-size: 1.8em;
-            font-weight: normal;
-            font-family: Titillium Web;
-            color: #707070;
-        }
-        p{
-            grid-area: 2 / 2 / 5 / 5; 
-            position: relative;
-            left: 2vw;
-            bottom: 4vh;
-            font-size: 1.2em;
-            color: #D39D5B;
-        }
-        .buttonplacement{
-            grid-area: 4 / 5 / 5 / 6; 
-            position: relative;
-            left: 6vw;
-            bottom: 3vh;
-        }
+    border-bottom: solid 2px #dfdfdf;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    img {
+      grid-area: 1 / 1 / 5 / 2;
+      width: 100%;
+      height: auto;
     }
- }
+    h2 {
+      grid-area: 1 / 2 / 2 / 4;
+      position: relative;
+      left: 2vw;
+      bottom: 3vh;
+      font-size: 1.8em;
+      font-weight: normal;
+      font-family: Titillium Web;
+      color: #707070;
+    }
+    p {
+      grid-area: 2 / 2 / 5 / 5;
+      position: relative;
+      left: 2vw;
+      bottom: 4vh;
+      font-size: 1.2em;
+      color: #d39d5b;
+    }
+    .buttonplacement {
+      grid-area: 4 / 5 / 5 / 6;
+      position: relative;
+      left: 6vw;
+      bottom: 3vh;
+    }
+  }
+}

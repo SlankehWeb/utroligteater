@@ -99,7 +99,6 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 10px;
   .actiondiv {
-  
     border: solid 1px #d39d5b;
     .actorfig {
       margin: 0;
@@ -109,17 +108,17 @@
         width: 100%;
         height: auto;
       }
-      p{
+      p {
         font-family: Titillium Web;
-        color: #D39D5B;
+        color: #d39d5b;
         text-align: center;
         font-size: 1em;
       }
     }
   }
 }
-hr{
-  background-color: #DFDFDF;
+hr {
+  background-color: #dfdfdf;
   margin-left: 2%;
   margin-right: 2%;
 }

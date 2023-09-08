@@ -14,7 +14,7 @@ const Footer = () => {
         <p>9000 Aalborg</p>
         <p>EAN 5798003279845</p>
         <p>CVR 1001 0012</p>
-        <p >Find vej på kort</p>
+        <p>Find vej på kort</p>
       </div>
       <div className="colum2">
         <div>

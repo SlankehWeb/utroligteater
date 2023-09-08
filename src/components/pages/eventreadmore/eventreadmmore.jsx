@@ -47,7 +47,7 @@ const EventReadMore = () => {
             </div>
             <p className="readmoreprice">BILLETPRIS:{data.price} DKK</p>
           </div>
-          <hr/>
+          <hr />
           <div className="titlebutton">
             <div className="titlename">
               <h2>{data.title}</h2>

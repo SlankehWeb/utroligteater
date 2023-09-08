@@ -4,18 +4,15 @@ import "./navbar.scss";
 const NavBar = () => {
   return (
     <>
-
       <header>
-     
-         <img           
-         src={require("./ae35da149404cf4d8a2f9403082159a2.png")}
+        <img
+          src={require("./ae35da149404cf4d8a2f9403082159a2.png")}
           className="logo"
           alt="logo"
         />
 
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
 
-   
         <nav>
           <ul>
             <li>

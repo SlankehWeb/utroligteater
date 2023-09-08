@@ -1,127 +1,123 @@
-.eventsCards{
-    .eventsCard{
-        text-align: center;
-        border: solid 1px #AD7A51;
-        margin-left: 10%;
-        margin-right: 10%;
+.eventsCards {
+  .eventsCard {
+    text-align: center;
+    border: solid 1px #ad7a51;
+    margin-left: 10%;
+    margin-right: 10%;
 
-img{
-    width: 100%;
-    height: auto;
-}
-h2{
-    font-family: Playfair Display;
-    color: #D39D5B;
-    font-size: 1.8em;
-}
-
-.stageanddate{
-    font-family: Titillium Web;
-    .date{
-        font-weight: bold;
+    img {
+      width: 100%;
+      height: auto;
     }
-}
+    h2 {
+      font-family: Playfair Display;
+      color: #d39d5b;
+      font-size: 1.8em;
+    }
 
-.button1{
+    .stageanddate {
+      font-family: Titillium Web;
+      .date {
+        font-weight: bold;
+      }
+    }
 
-    button{
-        background-color: #30454C; /* Green */
+    .button1 {
+      button {
+        background-color: #30454c; /* Green */
         border: none;
         color: white;
         padding: 0.5vh 4vw;
-        text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1em;
         font-weight: bold;
-
         max-width: 120px;
-    } 
-}
-.button2{
-
-    button{
-        background-color: #D39D5B; /* Green */
+        text-align: center;
+      }
+    }
+    .button2 {
+      button {
+        background-color: #d39d5b; /* Green */
         border: none;
         color: white;
-        padding:0.5vh 3vw;;
+        padding: 0.5vh 3vw;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1em;
         font-weight: bold;
         max-width: 120px;
+      }
     }
-}
-    }
+  }
 }
 @media screen and (min-width: 1300px) {
-    .eventsCards{
-        .eventsCard{
-            position: relative;
-            border: solid 1px #AD7A51;
-            display: grid;
-            margin-left: 10%;
-            margin-right: 10%;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    img{
+  .eventsCards {
+    .eventsCard {
+      position: relative;
+      border: solid 1px #ad7a51;
+      display: grid;
+      margin-left: 10%;
+      margin-right: 10%;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      img {
         grid-area: 1 / 1 / 2 / 2;
         width: 100%;
         height: auto;
-    }
-    h2{
+      }
+      h2 {
         margin-left: 5%;
-        grid-area: 1 / 2 / 2 / 3; 
+        grid-area: 1 / 2 / 2 / 3;
         font-family: Playfair Display;
-        color: #D39D5B;
+        color: #d39d5b;
         font-size: 1.8em;
-    }
-    
-    .stageanddate{
+      }
+
+      .stageanddate {
         margin-top: 3%;
         margin-left: 10%;
-        grid-area: 1 / 3 / 2 / 6; 
+        grid-area: 1 / 3 / 2 / 6;
         font-family: Titillium Web;
-        .date{
-            font-weight: bold;
+        .date {
+          font-weight: bold;
         }
-    }
-    
-    .button1{
+      }
+
+      .button1 {
         margin-top: 25%;
         grid-area: 1 / 6 / 2 / 7;
-        button{
-            background-color: #30454C; /* Green */
-            border: none;
-            color: white;
-            padding: 0.5vh 3vw;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            font-weight: bold;
-    
-        } 
-    }
-    .button2{
+        button {
+          background-color: #30454c; /* Green */
+          border: none;
+          color: white;
+          padding: 0.5vh 3vw;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 1em;
+          font-weight: bold;
+          max-width: 150px;
+        }
+      }
+      .button2 {
         grid-area: 1 / 7 / 2 / 8;
         margin-top: 25%;
-        button{
-            background-color: #D39D5B; /* Green */
-            border: none;
-            color: white;
-            padding:0.5vh 3vw;;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            font-weight: bold;
+        button {
+          background-color: #d39d5b; /* Green */
+          border: none;
+          color: white;
+          padding: 0.5vh 3vw;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 1em;
+          font-weight: bold;
+          max-width: 150px;
         }
+      }
     }
-        }
-    }
-
+  }
 }

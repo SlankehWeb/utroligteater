@@ -21,29 +21,30 @@ const ActorsDetails = () => {
       }
     };
 
- 
     getData();
-  }, [id]); 
+  }, [id]);
 
   return (
- 
     <div>
-    <div className="actorsdetailsborder">
-    <h1>Skuespillere</h1>
-      {data &&(  
-        <figure className="actorsdetailsCard" key={data.id}>
-          <img src={`http://localhost:4000/Assets/Images/actors/${data.image}`} alt="img" />
-          <h2>{data.name}</h2>
-          <p>{data.description}</p>
-        </figure>
-      )}
+      <div className="actorsdetailsborder">
+        <h1>Skuespillere</h1>
+        {data && (
+          <figure className="actorsdetailsCard" key={data.id}>
+            <img
+              src={`http://localhost:4000/Assets/Images/actors/${data.image}`}
+              alt="img"
+            />
+            <h2>{data.name}</h2>
+            <p>{data.description}</p>
+          </figure>
+        )}
       </div>
       <div className="actorsdetailbutton">
-      <Link to={`/skuespillere`}>
-            <button>ALLE SKUESPILLERE</button>
-          </Link>
-          </div>
+        <Link to={`/skuespillere`}>
+          <button>ALLE SKUESPILLERE</button>
+        </Link>
       </div>
+    </div>
   );
 };
 

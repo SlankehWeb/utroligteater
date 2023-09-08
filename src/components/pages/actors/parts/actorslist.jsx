@@ -19,21 +19,23 @@ const ActorsList = () => {
       }
     };
 
- 
     getData();
-  }, [setEvents]); 
+  }, [setEvents]);
 
   return (
     <div className="actorsCards">
       {events.map((data) => (
         <figure className="actorsCard" key={data.id}>
-              <img src={`http://localhost:4000/Assets/Images/actors/${data.image}`} alt="img" />
+          <img
+            src={`http://localhost:4000/Assets/Images/actors/${data.image}`}
+            alt="img"
+          />
           <h2>{data.name}</h2>
           <p>{data.description}</p>
           <div className="buttonplacement">
-          <Link to={`/skuespillere/${data.id}`}>
-            <button>LÆS MERE</button>
-          </Link>
+            <Link to={`/skuespillere/${data.id}`}>
+              <button>LÆS MERE</button>
+            </Link>
           </div>
         </figure>
       ))}

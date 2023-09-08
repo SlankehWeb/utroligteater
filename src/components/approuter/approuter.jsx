@@ -7,18 +7,17 @@ import EventReadMore from "../pages/eventreadmore/eventreadmmore";
 import ActorsDetails from "../pages/actorsdetails/actorsdetails";
 
 const AppRouter = () => {
-    return (
-        <Routes>
-        <Route path="/" element={<Frontpage/>}/>
-        <Route path=":id" element={<EventReadMore/>}/>
-        <Route path="/forestillinger&events" element={<Showsandevents/>}/>
-        <Route path="/forestillinger&events/:id" element={<EventReadMore/>}/>
-        <Route path="/skuespillere" element={<Actors/>}/>
-        <Route path="/skuespillere/:id" element={<ActorsDetails/>}/>
-        <Route path="/login" element={<Login/>}/>
-        </Routes>
-        );
-    };
-    
-    export default AppRouter;
-    
+  return (
+    <Routes>
+      <Route path="/" element={<Frontpage />} />
+      <Route path=":id" element={<EventReadMore />} />
+      <Route path="/forestillinger&events" element={<Showsandevents />} />
+      <Route path="/forestillinger&events/:id" element={<EventReadMore />} />
+      <Route path="/skuespillere" element={<Actors />} />
+      <Route path="/skuespillere/:id" element={<ActorsDetails />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  );
+};
+
+export default AppRouter;
