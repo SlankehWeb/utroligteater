@@ -5,16 +5,24 @@ import { Link } from "react-router-dom";
 import "./eventreadmore.scss";
 
 const EventReadMore = () => {
+  // State to store event data fetched from the server
   const [data, setData] = useState([]);
+  
+  // Get the 'id' parameter from the URL using React Router
   const { id } = useParams();
+
+  // Function to format a date in a specific way
   const formatDate = (dateNew) => {
     const date = new Date(dateNew);
     const options = { day: "2-digit", month: "short", year: "numeric" };
     return date.toLocaleDateString("da-DK", options);
   };
 
+  // Fetch event data from the server when the 'id' parameter changes
   useEffect(() => {
     const url = `http://localhost:4000/events/${id}`;
+    
+    // Function to fetch data asynchronously
     const getData = async () => {
       try {
         const result = await axios.get(url);
@@ -25,8 +33,8 @@ const EventReadMore = () => {
       }
     };
 
-    getData();
-  }, [id]);
+    getData(); // Call the getData function when the 'id' parameter changes
+  }, [id]); // This effect will run whenever 'id' changes
 
   return (
     <>

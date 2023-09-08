@@ -1,8 +1,9 @@
+@use "./colors.scss" as c;
 .footerbox {
   padding-top: 2%;
   text-align: center;
-  background-color: #30454c;
-  color: white;
+  background-color: c.$gray;
+  color: c.$white;
   .colum3 {
     display: none;
   }
