@@ -5,6 +5,7 @@ import Login from "../pages/login/login";
 import Actors from "../pages/actors/actors";
 import EventReadMore from "../pages/eventreadmore/eventreadmmore";
 import ActorsDetails from "../pages/actorsdetails/actorsdetails";
+import ErrorPage from "../pageNotFound/error404";
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
       <Route path="/skuespillere" element={<Actors />} />
       <Route path="/skuespillere/:id" element={<ActorsDetails />} />
       <Route path="/login" element={<Login />} />
+      <Route path="*" element={<ErrorPage/>} />
     </Routes>
   );
 };
