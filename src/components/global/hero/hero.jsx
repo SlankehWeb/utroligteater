@@ -33,7 +33,7 @@ const Hero = () => {
             rel="preload"
             fetchpriority="high"
             as="image"
-            src={require("./Fyrtøjet.avif")}
+            src={require("./Fyrtøjet.png")}
             alt="img"
           />
           <div className="h2r">
