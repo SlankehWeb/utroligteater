@@ -7,7 +7,7 @@ import "./eventreadmore.scss";
 const EventReadMore = () => {
   // State to store event data fetched from the server
   const [data, setData] = useState([]);
-  
+
   // Get the 'id' parameter from the URL using React Router
   const { id } = useParams();
 
@@ -21,7 +21,7 @@ const EventReadMore = () => {
   // Fetch event data from the server when the 'id' parameter changes
   useEffect(() => {
     const url = `http://localhost:4000/events/${id}`;
-    
+
     // Function to fetch data asynchronously
     const getData = async () => {
       try {
@@ -48,7 +48,7 @@ const EventReadMore = () => {
           </div>
           <div className="dateprice">
             <div className="readmoredate">
-              <p className="s1">{data.stage.name}</p>
+              {data.stage ? <p className="s1">{data.stage.name}</p> : null}
               <p className="s2">
                 {formatDate(data.startdate)} -{formatDate(data.stopdate)}
               </p>
@@ -59,7 +59,7 @@ const EventReadMore = () => {
           <div className="titlebutton">
             <div className="titlename">
               <h2>{data.title}</h2>
-              <p>{data.genre.name}</p>
+              {data.genre ? <p>{data.genre.name}</p> : null}
             </div>
             <div className="buttonreadmore">
               <Link to={`/forestillinger&events/${data.id}`}>
@@ -82,7 +82,7 @@ const EventReadMore = () => {
                         src={`http://localhost:4000/Assets/Images/actors/${actor.image}`}
                         alt="actor"
                       />
-                      <p>{actor.name}</p>
+                      {actor.name ? <p>{actor.name}</p> : null}
                     </figure>
                   </div>
                 );
